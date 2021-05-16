@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="script/main.js"></script>
+    <title>Probability Calculator</title>
+    <style>
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button{-webkit-appearance: none; margin: 0;}
+        input[type=number] {-moz-appearance: textfield;}
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item text-white"><h1 class="display-4">Yusuf Acar</h1></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Page content-->
+    <div style="text-align:center" class="p-3 mb-2 bg-primary text-white"">
+        <h2>Probability Calculator</h2>
+    </div>
+    <div class="alert alert-info" style="text-align:center" role="alert">
+        Please enter two probability values below to calculate the rest of the calculable probabilities with the given data.
+    </div>
+    <form id="form1">
+    <div class="d-flex justify-content-center">
+        <table>
+            <tr>
+               <th></th>
+            </tr>
+            <tr>
+                <td>
+                   <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="left" title="Probability of A occuring">P(A)</button>
+                </td>
+               <td><input type="number" class="form-control" id="a" placeholder="enter value" min="0" max="1" step="any"></td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="left" title="Probability of B occuring">P(B)</button>
+                </td>
+               <td><input type="number" class="form-control" id="b" placeholder="enter value" min="0" max="1" step="any"></td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="left" title="Probability of A not occuring">P(A')</button>
+                </td>
+                <td><input type="number" class="form-control" id="anotoccur" placeholder="enter value" min="0" max="1" step="any"></td>
+            </tr>
+             <tr>
+                <td>
+                    <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="left" title="Probability of B not occuring">P(B')</button>
+                </td>
+                <td><input type="number" class="form-control" id="bnotoccur" placeholder="enter value" min="0" max="1" step="any"></td>
+            </tr>
+             <tr>
+                <td>
+                    <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="left" title="Probability of A and B both occuring">P(A∩B)</button>
+                </td>
+                <td><input type="number" class="form-control" id="bothoccur" placeholder="enter value" min="0" max="1" step="any"></td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="left" title="Probability of A or B or BOTH occuring">P(A∪B)</button>
+                </td>
+                <td><input type="number" class="form-control" id="aborboth" placeholder="enter value" min="0" max="1" step="any"></td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="left" title="Probability of only A or only B occuring">P(AΔB)</button>
+                </td>
+                <td><input type="number" class="form-control" id="aorbnotboth" placeholder="enter value" min="0" max="1" step="any"></td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="left" title="Probability of neither A or B occuring">P((A∪B)')</button>
+                </td>
+                <td><input type="number" class="form-control" id="aorbnotoccur" placeholder="enter value" min="0" max="1" step="any"></td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="left" title="Probability of A is occuring but B not">P(AbutNotB)</button>
+                </td>
+                <td><input type="number" class="form-control" id="abutnotb" placeholder="enter value" min="0" max="1" step="any"></td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="left" title="Probability of B is occuring but A not">P(BbutNoA)</button>
+                </td>
+                <td><input type="number" class="form-control" id="bbutnota" placeholder="enter value" min="0" max="1" step="any"></td>
+            </tr>
+        </table>
+        <tr>
+        <button type="button" onclick=probabilitycalc() onsubmit="return;" class="btn btn-primary">Calculate</button>
+        <button type="button" onclick=clearinput() class="btn btn-success">Clear</button>
+    </tr>
+    </form>
+    </div>
+    <blockquote class="blockquote" style="text-align:center">
+        <br>
+        <p class="mb-0">The probability calculator handles independent probability problems that can be solved using<br>three general rules of probability: substraction, addition and multiplaction.</p>
+    </blockquote>
+</body>
+</html>
